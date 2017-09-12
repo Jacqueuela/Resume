@@ -1,0 +1,242 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column One Page Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (24/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.75cm, vmargin=2cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage{enumitem}
+\usepackage{xpatch}
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{tgadventor}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+\usepackage{color}
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\LARGE\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\setlength{\tabcolsep}{0pt}
+\noindent
+\par{\centering
+\begin{tabular}{rl}
+    \fontfamily{serif}\Huge\textrm{Jack } & \fontfamily{serif}\Huge\textrm{Wang}\\ % Your name
+    \fontfamily{serif} \selectfont\LARGE {Software } & \fontfamily{serif} \selectfont\LARGE {Engineering} \smallskip  \\
+    \fontfamily{serif} \selectfont\large \href{https://github.com/jj22wang}{github.com/jj22wang\ \ } & \multicolumn{1}{|l}{\href{mailto:jj22wang@uwaterloo.ca}{\ \ jj22wang@uwaterloo.ca}}
+\end{tabular}
+\noindent
+
+\setlength{\tabcolsep}{4pt}
+
+%----------------------------------------------------------------------------------------
+
+ \begin{minipage}[t]{0.52\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%-------------------------------------------------------- --------------------------------
+
+\section{Professional Experience}
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+
+{\raggedleft\color{gray}\textsc{August 2016 - Present}\par}
+
+{\textit{{Yelp}}\\
+\raggedright\large Data Quality Engineer \small\color{darkgray} | Python, Sklearn, Pandas \\[5pt]}
+
+\begin{itemize}[noitemsep, nosep, leftmargin=.75cm]
+  \setlength\itemsep{.25em}
+  \item {Sourced new training and gold set data to significantly improve the performance of location accuracy models}
+  \item {Fine tuned data model by building new features, adding new signals and adjusting decision thresholds}
+  \item {Constructed a feedback loop using in-app survey questions to adjust for inaccurate model predictions}
+  \item {Improved automatic business attribute detection to handle multiple active subattributes}
+
+\end{itemize}
+
+%------------------------------------------------
+% WORK EXPERIENCE 2
+%------------------------------------------------
+
+{\raggedleft\color{gray}\textsc{January 2016 - April 2016}\par}
+
+{\textit{{Capital One}}\\
+\raggedright\large Data Scientist \small\color{darkgray} | Python, PySpark, Hive, JavaScript, Sklearn\\[5pt]}
+
+\begin{itemize}[noitemsep, nosep, leftmargin=.75cm]
+  \setlength\itemsep{.25em}
+  \item {Adapted and productionalized existing data models to service data visualization applications}
+  \item {Designed a parallelized batching pipeline using pySpark and Hive to batch data prepping}
+  \item {Migrated web services to use Docker to improve deployability with AWS}
+\end{itemize}
+
+%------------------------------------------------
+% WORK EXPERIENCE 3
+%------------------------------------------------
+
+{\raggedleft\color{gray}\textsc{May 2015 - August 2015}\par}
+
+{\textit{{Loyalty One}}\\
+\raggedright\large R\&D Engineer \small\color{darkgray} | \textsc{Scala}, Spark, Kafka, Elasticsearch\\[5pt]}
+
+\begin{itemize}[noitemsep, nosep, leftmargin=.75cm]
+  \setlength\itemsep{.25em}
+  \item {Developed a distributed computing API using Spark, to eliminate boilerplate code for ML feature generation}
+  \item {Parallelized existing data analytics processes improving run times by 100 times}
+  \item {Executed large scale performance testing to optimize data aggregation runtimes}
+  \item {Provided an end to end streaming data pipeline to do real-time analysis of campaign statistics}
+  \item {Integrated Jenkins into services built}
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+
+%------------------------------------------------
+% EDUCATION 1
+%------------------------------------------------
+
+2014 -- 2019 & Candidate for \textsc{B.SE.} 3.7 Gpa \\
+& \large\textit{The University of Waterloo}\\
+&\\
+
+\end{tabular}\\[10pt]
+
+
+%------------------------------------------------
+% END PAGE
+%------------------------------------------------
+
+\end{minipage} % End the left-hand side of the page
+\hfill
+\begin{minipage}[t]{0.41\textwidth} % Start the right-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+\begin{tabular}{rl}
+Languages
+& Python, Scala, Javascript \\
+& \\
+Libraries
+& Spark, MLlib, Jenkins, \\
+& Sklearn, Pandas, Matplotlib, \\
+& \\
+Tools
+& Hive, MySQL, Elasticsearch,\\
+& Kafka, Git, Docker  \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Side Projects}
+
+\vspace{6pt}
+
+
+{\raggedright\large Tagger \small\color{darkgray} | Python   \\ [5pt]}
+A python script to predict and tag song attributes using existing tags and filename
+\begin{itemize}[noitemsep, nosep, leftmargin=.75cm]
+  \setlength\itemsep{.25em}
+  \item {Researched previous work on filename analysis done in Sony CSL's A Naturalist Approach to Music File Name Analysis}
+  \item {Designed an algorithm to chunk and weight the different segments of a filename}
+  \item {Reconciled chunked filename information with existing tag information and online databases}
+
+\end{itemize}
+
+\vspace{10pt}
+
+{\raggedright\large MeetMe \small\color{darkgray} | JavaScript\\ [5pt]}
+A Google Maps webapp to find the closest meeting point between a set of locations
+\begin{itemize}[noitemsep, nosep, leftmargin=.75cm]
+  \setlength\itemsep{.25em}
+  \item {Interprets distance information to estimate where optimal search locations}
+  \item {Aggregates distance matrixes to find an optimal meeting place}
+
+\end{itemize}
+\vspace{10pt}
+
+
+{\raggedright\large FunctionSolver \small\color{darkgray} | JavaScript\\ [5pt]}
+A web application to interpret, reduce and graph mathematical equations
+\begin{itemize}[noitemsep, nosep, leftmargin=.75cm]
+  \item {Wrote a recursive chunking algorithm to parse and syntax check user input}
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End right-hand side of the page
+
+\end{document}

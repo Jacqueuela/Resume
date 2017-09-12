@@ -1,0 +1,5 @@
+PWD /home/jack/Documents/Resume/Winter 2017/cv-sections
+INPUT /home/jack/.texlive2015/texmf-var/web2c/luatex/lualatex.fmt
+INPUT ./experience.tex
+OUTPUT experience.log
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

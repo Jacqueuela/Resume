@@ -1,0 +1,266 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column One Page Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (24/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.75cm, vmargin=2cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage{enumitem}
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+\usepackage{color}
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\LARGE\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\setlength{\tabcolsep}{0pt}
+\noindent
+\par{\centering
+\begin{tabular}{rl}
+    \fontfamily{serif}\Huge\textrm{Jack } & \fontfamily{serif}\Huge\textrm{Wang}\\ % Your name
+    \fontfamily{serif} \selectfont\LARGE {Software } & \fontfamily{serif} \selectfont\LARGE {Engineering} \smallskip  \\
+    \fontfamily{serif} \selectfont\large \href{https://github.com/jj22wang}{github.com/jj22wang\ \ } & \multicolumn{1}{|l}{\href{mailto:jj22wang@uwaterloo.ca}{\ \ jj22wang@uwaterloo.ca}}
+\end{tabular}
+\noindent
+
+\setlength{\tabcolsep}{4pt}
+
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.6\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%-------------------------------------------------------- --------------------------------
+
+\section{Professional Experience}
+
+%------------------------------------------------
+% WORK EXPERIENCE 1
+%------------------------------------------------
+
+{\raggedleft\color{gray}\textsc{August 2016 - Present}\par}
+
+{\textit{{Yelp}}\\
+\raggedright\large Data Quality Engineer \small\color{darkgray} | python, sklearn, Kafka, \textsc{SQL}\\[5pt]}
+
+\begin{itemize}[noitemsep, nosep, leftmargin=.5cm]
+  \item {Worked to source and display accurate data to customers}
+  \item {Investigated and fixed Yelp business data errors}
+  \item {Designed a service to utilize machine learning algorithms to improve business location accuracy}
+  \item {Improved on user survey scoring algorithms to reduce false positives when calculating business categories}
+  \item {Updated merge logic and added extensive test coverage to handle duplicate business removal}
+
+\end{itemize}
+
+%------------------------------------------------
+% WORK EXPERIENCE 2
+%------------------------------------------------
+
+{\raggedleft\color{gray}\textsc{January 2016 - April 2016}\par}
+
+{\textit{{Capital One}}\\
+\raggedright\large Data Scientist \small\color{darkgray} | python, pySpark, Hive, JavaScript, sklearn\\[5pt]}
+
+\begin{itemize}[noitemsep, nosep, leftmargin=.5cm]
+  \item {Developed web applications for data visualization using Javascript and D3}
+  \item {Adapted and optimized existing scikit-learn machine learning algorithms to service data applications}
+  \item {Designed a parallelized batching pipeline using pySpark and Hive, to precalculate and cache expensive machine learning processes}
+  \item {Migrated web applications to be servable from a Docker environment, reducing deployment complexity on AWS}
+
+\end{itemize}
+
+%------------------------------------------------
+% WORK EXPERIENCE 3
+%------------------------------------------------
+
+{\raggedleft\color{gray}\textsc{May 2015 - August 2015}\par}
+
+{\textit{{Loyalty One}}\\
+\raggedright\large R\&D Engineer \small\color{darkgray} | \textsc{Scala}, Spark, \textsc{HDFS}, Kafka, elasticsearch\\[5pt]}
+
+\begin{itemize}[noitemsep, nosep, leftmargin=.5cm]
+  \item {Developed a distributed computing API using the Spark framework,
+  		to eliminate boilerplate code for feature generation and data obfuscation}
+  \item {Parallelized existing data analytics processes, improving process times by up to 100 times}
+  \item {Implemented automated testing using Jenkins}
+  \item {Executed large scale performance testing on over 80TB of testing data,
+		to optimize Hadoop chunk sizes, data structures and transformation processes}
+  \item {Prototyped an end to end data streaming pipeline using Spark Streaming, Kafka and elasticsearch}
+  \item {Provided API support, debugging and code assitance for data science specialists}
+
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education and Awards}
+
+\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+
+%------------------------------------------------
+% EDUCATION 1
+%------------------------------------------------
+
+2014 -- 2019 & Candidate for \textsc{B.SE.} \\
+& \large\textit{The University of Waterloo}\\
+&\\
+
+%------------------------------------------------
+% EDUCATION 2
+%------------------------------------------------
+
+2010 -- 2014 & \textsc{OSSD}, Gifted \\
+& \large\textit{Nothern Secondary School}
+\end{tabular}\\[10pt]
+
+
+%------------------------------------------------
+% END PAGE
+%------------------------------------------------
+
+\end{minipage} % End the left-hand side of the page
+\hfill
+\begin{minipage}[t]{0.34\textwidth} % Start the right-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+\begin{tabular}{rl}
+Languages
+& python, \textsc{Scala}, JavaScript, \\
+& \textsc{java}, C++ \\
+& \\
+Frameworks
+& Spark, pySpark, sklearn, SciPy, \\
+& Hive, \textsc{HDFS}, SQL, elasticsearch,\\
+& kafka, Gradle , D3 \\
+& \\
+Environemnts
+& Windows, Linux, OSX, \\
+& Bash, AWS, Git, Docker
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Side Projects}
+
+\vspace{6pt}
+
+
+{\raggedright\large Tagger \small\color{darkgray} | python, Discogs API \\ [5pt]}
+A python script to automatically tag song attributes using existing tags and filename
+\begin{itemize}[noitemsep, nosep, leftmargin=.5cm]
+  \item {Researched previous work and papers on this topic done by Sony }
+  \item {Designed an algorithm to chunk and weight the different segments of a filename}
+  \item {Created a module to query the Discogs Database API in order to scrape information from existing file information available}
+
+\end{itemize}
+
+\vspace{10pt}
+
+{\raggedright\large MeetMe \small\color{darkgray} | JavaScript, jQuery, Google Maps API\\ [5pt]}
+A Google Maps service to find the closest meeting point between a set of starting locations
+\begin{itemize}[noitemsep, nosep, leftmargin=.5cm]
+  \item {Aggregated distance matrixes from API calls to determine if optimal meeting point is found}
+  \item {Desgined an algorithm to repeated query different locations to balance travel times}
+  \item {Utilized geometric distances and previous queries to update new search areas}
+
+\end{itemize}
+\vspace{10pt}
+
+{\raggedright\large MyoGuitar \small\color{darkgray} | \textsc{Java}, Lua, Android API\\ [5pt]}
+
+A Guitar playing app to utilize the Myo armband
+
+\begin{itemize}[noitemsep, nosep, leftmargin=.5cm]
+  \item {Utilized Android's developer API to implement multi-touch functionality}
+  \item {Mapped contact point combinations to keys}
+
+\end{itemize}
+
+\vspace{10pt}
+
+{\raggedright\large FunctionSolver \small\color{darkgray} | \textsc{HTML}, \textsc{CSS}, JavaScript\\ [5pt]}
+A web application to interpret, reduce and graph mathematical equations
+\begin{itemize}[noitemsep, nosep, leftmargin=.5cm]
+  \item {Wrote a recursive chunking algorithm to parse and syntax check user input}
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End right-hand side of the page
+
+\end{document}
