@@ -4,3 +4,7 @@ build/*
 *.synctex.*
 *.png
 *.aux
+
+# Archived away previous terms
+/2016_*/
+/2017_winter/
