@@ -4,7 +4,10 @@ build/*
 *.synctex.*
 *.png
 *.aux
-
+*.otf
+*.ttf 
+*.fls
+*.fdb_latexmk
 # Archived away previous terms
 /2016_*/
 /2017_winter/
