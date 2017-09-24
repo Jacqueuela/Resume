@@ -444,7 +444,7 @@
               \setbool{isstart}{false}
             }
             {\@headersocialsep}
-          \headerfontlight{\href{https://github.com/\@github}{\@github}}
+          \headerfontlight{\href{https://github.com/\@github}{github/\@github}}
         }
       \ifthenelse{\isundefined{\@gitlab}}
         {}
